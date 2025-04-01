@@ -19,6 +19,20 @@ public class RentACatImpl implements RentACat {
 
 	public boolean returnCat(int id) {
 		// TODO: Fill in
+		Cat cat=getCat(id);
+		//green
+		if (cat==null) {
+			System.out.println("Invalid cat ID.");
+			return false;
+		}
+		if (cat!=null && cat.getRented()==true) {
+			cat.returnCat();
+			//green
+			System.out.println("Welcome back, "+cat.getName()+"!");
+			return true;
+		}
+		//green
+		System.out.println(cat.getName()+" is already here!");
 		return false;
 	}
 
@@ -34,6 +48,20 @@ public class RentACatImpl implements RentACat {
 
 	public boolean rentCat(int id) {
 		// TODO: Fill in
+		//green
+		Cat cat=getCat(id);
+		if (cat==null) {
+			System.out.println("Invalid cat ID.");
+			return false;
+		}
+		if (cat!=null && cat.getRented()==false) {
+			cat.rentCat();
+			//green
+			System.out.println(cat.getName()+" has been rented.");
+			return true;
+		}
+		//green
+		System.out.println("Sorry, "+cat.getName()+" is not here!");
 		return false;
 	}
 
@@ -48,6 +76,11 @@ public class RentACatImpl implements RentACat {
 
 	public boolean renameCat(int id, String name) {
 		// TODO: Fill in
+		Cat cat=getCat(id);
+		if (cat!=null) {
+			cat.renameCat(name);
+			return true;
+		}
 		return false;
 	}
 
@@ -63,7 +96,18 @@ public class RentACatImpl implements RentACat {
 
 	public String listCats() {
 		// TODO: Fill in
-		return "WRITE CODE FOR THIS";
+		//green
+		if (cats.isEmpty()) {
+			System.out.println("No cats available for rent.");
+			return "";
+		}
+		StringBuilder list=new StringBuilder();
+		for(Cat cat:cats){
+			if (cat.getRented()==false) {
+				list.append(cat.toString()+"\n");
+			}
+		}
+		return list.toString();
 	}
 
 	/**
@@ -78,6 +122,7 @@ public class RentACatImpl implements RentACat {
 
 		// null check
 		if (cats == null) {
+			System.out.println("Invalid cat ID.");
 			return null;
 		}
 
@@ -87,6 +132,8 @@ public class RentACatImpl implements RentACat {
 			// of the argument, then we have a match and
 			// can thus return a reference to that cat
 			if (c.getId() == id) {
+				//green
+				//System.out.println("cat has an ID of "+id);
 				return c;
 			}
 		}
