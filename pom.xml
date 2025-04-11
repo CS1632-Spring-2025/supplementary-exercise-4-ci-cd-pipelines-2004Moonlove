@@ -4,8 +4,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.github.2004Moonlove</groupId>
-  <artifactId>cs1632-cicd-pipelines-2004Moonlove</artifactId>
+  <groupId>io.github.wonsunahn</groupId>
+  <artifactId>cs1632-cicd-pipelines-YAY140</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
 
@@ -40,7 +40,7 @@ he -->
     <repository>
       <id>github</id>
       <name>GitHub Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/CS1632-Spring-2025/supplementary-exercise-4-ci-cd-pipelines-2004Moonlove</url>
+      <url>https://maven.pkg.github.com/CS1632-Spring-2025/supplementary-exercise-4-ci-cd-pipelines-YAY140</url>
     </repository>
   </distributionManagement>
 
