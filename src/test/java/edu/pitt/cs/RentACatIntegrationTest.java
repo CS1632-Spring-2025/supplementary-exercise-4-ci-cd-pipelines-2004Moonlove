@@ -230,6 +230,7 @@ public class RentACatIntegrationTest {
 	/**
 	 * Test case for boolean rentCat(int id).
 	 * 
+	 * 
 	 * <pre>
 	 * Preconditions: c1, c2, and c3 are added to r using addCat(Cat c).
 	 * Execution steps: Call rentCat(2).
@@ -269,7 +270,7 @@ public class RentACatIntegrationTest {
 		r.addCat(c3);
 		assertEquals(false,r.rentCat(2));
 		//
-		assertEquals(true, c2.getRented());
+		assertFalse(c2.getRented());
 		assertEquals("Sorry, Old Deuteronomy is not here!" + newline,out.toString());
 	}
 
@@ -314,7 +315,8 @@ public class RentACatIntegrationTest {
 		r.addCat(c2);
 		r.addCat(c3);
 		assertEquals(false,r.returnCat(2));
-		assertEquals(false, c2.getRented());
+		//
+		assertFalse(c2.getRented());
 		assertEquals("Old Deuteronomy is already here!" + newline,out.toString());
 	}
 
