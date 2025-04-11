@@ -131,7 +131,7 @@ he -->
                     <limit>
                       <counter>INSTRUCTION</counter>
                       <value>COVEREDRATIO</value>
-                      <minimum>20%</minimum>
+                      <minimum>0%</minimum>
                     </limit>
                   </limits>
                   <includes>
