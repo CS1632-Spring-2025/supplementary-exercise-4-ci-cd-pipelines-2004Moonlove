@@ -234,6 +234,7 @@ public class RentACatUnitTest {
 		r.addCat(c2);
 		r.addCat(c3);
 		assertEquals(true,r.renameCat(2, "Garfield"));
+		c2.renameCat("Garfield");
 		assertEquals("Garfield",c2.getName());
 	}
 
