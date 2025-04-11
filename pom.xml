@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.github.CS1632-Spring-2025</groupId>
+  <groupId>io.github.2004Moonlove</groupId>
   <artifactId>cs1632-cicd-pipelines-2004Moonlove</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
