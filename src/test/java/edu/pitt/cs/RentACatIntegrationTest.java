@@ -270,7 +270,7 @@ public class RentACatIntegrationTest {
 		r.addCat(c3);
 		assertEquals(false,r.rentCat(2));
 		//
-		assertFalse(c2.getRented());
+		assertTrue(c2.getRented()); 
 		assertEquals("Sorry, Old Deuteronomy is not here!" + newline,out.toString());
 	}
 
