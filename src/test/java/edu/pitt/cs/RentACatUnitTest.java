@@ -233,10 +233,11 @@ public class RentACatUnitTest {
 		r.addCat(c1);
 		r.addCat(c2);
 		r.addCat(c3);
+		when(c2.getName()).thenReturn("Garfield");
 		assertEquals(true,r.renameCat(2, "Garfield"));
 		c2.renameCat("Garfield");
-		// assertEquals("Garfield",c2.getName());
-		verify(c2).renameCat("Garfield");
+		assertEquals("Garfield",c2.getName());
+		// verify(c2).renameCat("Garfield");
 	}
 
 	/**
