@@ -219,7 +219,7 @@ public class RentACatIntegrationTest {
 	@Test
 	public void testRenameNumCat3() {
 		// TODO: Fill in
-		r = RentACat.createInstance(InstanceType.IMPL);
+		r = RentACat.createInstance(InstanceType.BUGGY);
 		r.addCat(c1);
 		r.addCat(c2);
 		r.addCat(c3);
